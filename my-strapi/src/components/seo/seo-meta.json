@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_seo_seo_metas",
+  "info": {
+    "displayName": "seoMeta",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "shareImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "canonicalURL": {
+      "type": "string"
+    },
+    "ogType": {
+      "type": "string"
+    },
+    "twitterCard": {
+      "type": "string"
+    },
+    "structuredData": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "singularName": "country",
+    "pluralName": "countries",
+    "displayName": "Country"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "CountryName": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "CountryCode": {
+      "type": "string",
+      "required": true,
+      "regex": "^[A-Z]{2}$"
+    },
+    "CountryDesc": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "time_zones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::time-zone.time-zone",
+      "inversedBy": "countries"
+    }
+  }
+}

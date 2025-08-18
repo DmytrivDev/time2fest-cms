@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_zones",
+  "info": {
+    "singularName": "time-zone",
+    "pluralName": "time-zones",
+    "displayName": "TimeZone",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "regex": "^UTC[+-](?:1[0-4]|[0-9])(?:\\.(25|5|75))?$"
+    },
+    "offcet": {
+      "type": "string",
+      "required": true,
+      "regex": "^[+-](0[0-9]|1[0-4]):(00|15|30|45)$"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::country.country",
+      "mappedBy": "time_zones"
+    }
+  }
+}

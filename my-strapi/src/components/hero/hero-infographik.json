@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_hero_hero_infographiks",
+  "info": {
+    "displayName": "HeroInfographik",
+    "icon": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

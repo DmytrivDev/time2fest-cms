@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_become_streamer_become_streamers",
+  "info": {
+    "displayName": "BecomeStreamer",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

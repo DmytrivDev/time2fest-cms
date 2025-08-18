@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_faq_faqs",
+  "info": {
+    "displayName": "faq",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
