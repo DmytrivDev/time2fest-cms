@@ -18,8 +18,7 @@
   "attributes": {
     "code": {
       "type": "string",
-      "required": true,
-      "regex": "^UTC[+-](?:1[0-4]|[0-9])(?:\\.(25|5|75))?$"
+      "required": true
     },
     "offcet": {
       "type": "string",
