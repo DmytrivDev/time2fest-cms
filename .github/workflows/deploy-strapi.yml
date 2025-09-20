@@ -25,6 +25,7 @@ jobs:
       - name: Sync Strapi code to server
         run: |
           rsync -az \
+            --rsync-path="sudo rsync" \
             --exclude='.env' \
             --exclude='node_modules' \
             ./my-strapi/ \
