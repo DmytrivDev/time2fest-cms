@@ -1,0 +1,39 @@
+name: Deploy Strapi
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-strapi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_ACCESS }}
+
+      - name: Add server to known_hosts
+        run: |
+          ssh-keyscan -H 178.20.157.85 >> ~/.ssh/known_hosts
+
+      - name: Sync Strapi code to server
+        run: |
+          rsync -az \
+            --exclude='.env' \
+            --exclude='node_modules' \
+            ./my-strapi/ \
+            deploy@178.20.157.85:/home/deploy/time2fest/strapi/
+
+      - name: Rebuild Strapi container
+        run: |
+          ssh deploy@178.20.157.85 "
+            cd /home/deploy/time2fest &&
+            docker compose build strapi &&
+            docker compose up -d strapi
+          "
