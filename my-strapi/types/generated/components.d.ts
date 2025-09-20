@@ -15,6 +15,21 @@ export interface AboutAboutItems extends Struct.ComponentSchema {
   };
 }
 
+export interface AboutHero extends Struct.ComponentSchema {
+  collectionName: 'components_about_heroes';
+  info: {
+    displayName: 'Hero';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images'>;
+    Tag: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+    Undertitle: Schema.Attribute.Text;
+  };
+}
+
 export interface BecomeStreamerBecomeStreamer extends Struct.ComponentSchema {
   collectionName: 'components_become_streamer_become_streamers';
   info: {
@@ -72,6 +87,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about.about-items': AboutAboutItems;
+      'about.hero': AboutHero;
       'become-streamer.become-streamer': BecomeStreamerBecomeStreamer;
       'faq.faq': FaqFaq;
       'hero.hero-infographik': HeroHeroInfographik;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-page",
     "pluralName": "about-pages",
-    "displayName": "AboutPage"
+    "displayName": "AboutPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,8 +16,10 @@
     }
   },
   "attributes": {
-    "dfsdf": {
-      "type": "string"
+    "HeroAbout": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.hero"
     }
   }
 }

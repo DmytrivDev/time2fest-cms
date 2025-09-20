@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_about_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Tag": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Undertitle": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}
