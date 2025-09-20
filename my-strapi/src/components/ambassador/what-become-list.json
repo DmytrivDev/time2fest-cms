@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_ambassador_what_become_lists",
+  "info": {
+    "displayName": "WhatBecomeList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

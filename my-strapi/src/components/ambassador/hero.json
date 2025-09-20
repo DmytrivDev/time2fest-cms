@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_ambassador_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Tag": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "HeroList": {
+      "displayName": "HeroList",
+      "type": "component",
+      "repeatable": true,
+      "component": "ambassador.hero-list",
+      "max": 3
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_ambassador_streaams",
+  "info": {
+    "displayName": "Streaam",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "StreamList": {
+      "displayName": "StreamList",
+      "type": "component",
+      "repeatable": true,
+      "component": "ambassador.stream-list"
+    },
+    "BottomText": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

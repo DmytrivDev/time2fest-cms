@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ambassador_hero_lists",
+  "info": {
+    "displayName": "HeroList",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}

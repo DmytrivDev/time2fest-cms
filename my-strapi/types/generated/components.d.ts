@@ -278,6 +278,149 @@ export interface AboutWhyWeList extends Struct.ComponentSchema {
   };
 }
 
+export interface AmbassadorHero extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_heroes';
+  info: {
+    displayName: 'Hero';
+    icon: 'dashboard';
+  };
+  attributes: {
+    HeroList: Schema.Attribute.Component<'ambassador.hero-list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
+    Tag: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface AmbassadorHeroList extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_hero_lists';
+  info: {
+    displayName: 'HeroList';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Name: Schema.Attribute.Text;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface AmbassadorStreaam extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_streaams';
+  info: {
+    displayName: 'Streaam';
+    icon: 'dashboard';
+  };
+  attributes: {
+    BottomText: Schema.Attribute.String;
+    StreamList: Schema.Attribute.Component<'ambassador.stream-list', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface AmbassadorStreamList extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_stream_lists';
+  info: {
+    displayName: 'StreamList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface AmbassadorWhatBecome extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_what_becomes';
+  info: {
+    displayName: 'WhatBecome';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    WhatBecomeList: Schema.Attribute.Component<
+      'ambassador.what-become-list',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
+  };
+}
+
+export interface AmbassadorWhatBecomeList extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_what_become_lists';
+  info: {
+    displayName: 'WhatBecomeList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface AmbassadorWhatDo extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_what_dos';
+  info: {
+    displayName: 'WhatDo';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+    WhatDoList: Schema.Attribute.Component<'ambassador.what-do-list', true>;
+  };
+}
+
+export interface AmbassadorWhatDoList extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_what_do_lists';
+  info: {
+    displayName: 'WhatDoList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Name: Schema.Attribute.Text & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface AmbassadorWhatGet extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_what_gets';
+  info: {
+    displayName: 'WhatGet';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+    WhatGetList: Schema.Attribute.Component<'ambassador.what-get-list', true>;
+  };
+}
+
+export interface AmbassadorWhatGetList extends Struct.ComponentSchema {
+  collectionName: 'components_ambassador_what_get_lists';
+  info: {
+    displayName: 'WhatGetList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Name: Schema.Attribute.String & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text;
+  };
+}
+
 export interface BecomeStreamerBecomeStreamer extends Struct.ComponentSchema {
   collectionName: 'components_become_streamer_become_streamers';
   info: {
@@ -353,6 +496,16 @@ declare module '@strapi/strapi' {
       'about.way-list': AboutWayList;
       'about.why-we': AboutWhyWe;
       'about.why-we-list': AboutWhyWeList;
+      'ambassador.hero': AmbassadorHero;
+      'ambassador.hero-list': AmbassadorHeroList;
+      'ambassador.streaam': AmbassadorStreaam;
+      'ambassador.stream-list': AmbassadorStreamList;
+      'ambassador.what-become': AmbassadorWhatBecome;
+      'ambassador.what-become-list': AmbassadorWhatBecomeList;
+      'ambassador.what-do': AmbassadorWhatDo;
+      'ambassador.what-do-list': AmbassadorWhatDoList;
+      'ambassador.what-get': AmbassadorWhatGet;
+      'ambassador.what-get-list': AmbassadorWhatGetList;
       'become-streamer.become-streamer': BecomeStreamerBecomeStreamer;
       'faq.faq': FaqFaq;
       'hero.hero-infographik': HeroHeroInfographik;

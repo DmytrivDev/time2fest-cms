@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_ambassador_what_dos",
+  "info": {
+    "displayName": "WhatDo",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "WhatDoList": {
+      "displayName": "WhatDoList",
+      "type": "component",
+      "repeatable": true,
+      "component": "ambassador.what-do-list"
+    }
+  }
+}

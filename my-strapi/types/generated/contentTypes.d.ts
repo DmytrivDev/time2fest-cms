@@ -510,6 +510,74 @@ export interface ApiAboutPlatformAboutPlatform extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAmbassPageAmbassPage extends Struct.SingleTypeSchema {
+  collectionName: 'ambass_pages';
+  info: {
+    description: '';
+    displayName: 'AmbassPage';
+    pluralName: 'ambass-pages';
+    singularName: 'ambass-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FAQ: Schema.Attribute.Component<'about.faq', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Hero: Schema.Attribute.Component<'ambassador.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambass-page.ambass-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    Stream: Schema.Attribute.Component<'ambassador.streaam', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WhatBecome: Schema.Attribute.Component<'ambassador.what-become', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    WhatDo: Schema.Attribute.Component<'ambassador.what-do', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    WhatGet: Schema.Attribute.Component<'ambassador.what-get', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
 export interface ApiBecomeStreamerBecomeStreamer
   extends Struct.SingleTypeSchema {
   collectionName: 'become_streamers';
@@ -1348,6 +1416,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::about-platform.about-platform': ApiAboutPlatformAboutPlatform;
+      'api::ambass-page.ambass-page': ApiAmbassPageAmbassPage;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
       'api::country.country': ApiCountryCountry;
       'api::faq.faq': ApiFaqFaq;

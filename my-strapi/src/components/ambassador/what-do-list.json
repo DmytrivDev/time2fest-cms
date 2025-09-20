@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_ambassador_what_do_lists",
+  "info": {
+    "displayName": "WhatDoList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "text",
+      "required": true
+    },
+    "Text": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

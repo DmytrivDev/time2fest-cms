@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_ambassador_what_becomes",
+  "info": {
+    "displayName": "WhatBecome",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "WhatBecomeList": {
+      "displayName": "WhatBecomeList",
+      "type": "component",
+      "repeatable": true,
+      "component": "ambassador.what-become-list",
+      "max": 3
+    }
+  }
+}
