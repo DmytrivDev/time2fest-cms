@@ -18,12 +18,13 @@ export interface AboutAboutItems extends Struct.ComponentSchema {
 export interface AboutHero extends Struct.ComponentSchema {
   collectionName: 'components_about_heroes';
   info: {
+    description: '';
     displayName: 'Hero';
     icon: 'dashboard';
   };
   attributes: {
     Icon: Schema.Attribute.Media<'images'>;
-    Tag: Schema.Attribute.String;
+    TagText: Schema.Attribute.String;
     Text: Schema.Attribute.Text;
     Title: Schema.Attribute.String;
     Undertitle: Schema.Attribute.Text;
