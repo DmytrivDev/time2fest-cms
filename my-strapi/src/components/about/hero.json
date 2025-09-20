@@ -2,18 +2,20 @@
   "collectionName": "components_about_heroes",
   "info": {
     "displayName": "Hero",
-    "icon": "dashboard"
+    "icon": "dashboard",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Tag": {
+    "TagText": {
       "type": "string"
     },
     "Title": {
