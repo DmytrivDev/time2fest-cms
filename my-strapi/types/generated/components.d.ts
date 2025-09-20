@@ -24,7 +24,7 @@ export interface AboutHero extends Struct.ComponentSchema {
   };
   attributes: {
     Icon: Schema.Attribute.Media<'images'>;
-    TagText: Schema.Attribute.String;
+    Tag: Schema.Attribute.String;
     Text: Schema.Attribute.Text;
     Title: Schema.Attribute.String;
     Undertitle: Schema.Attribute.Text;

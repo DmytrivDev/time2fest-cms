@@ -15,7 +15,7 @@
         "images"
       ]
     },
-    "TagText": {
+    "Tag": {
       "type": "string"
     },
     "Title": {
