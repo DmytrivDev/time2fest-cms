@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_strps_lists",
+  "info": {
+    "displayName": "StrpsList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

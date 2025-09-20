@@ -19,7 +19,110 @@
     "HeroAbout": {
       "type": "component",
       "repeatable": false,
-      "component": "about.hero"
+      "component": "about.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "WhyWe": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.why-we",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Steps": {
+      "displayName": "Steps",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.steps",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FreePlan": {
+      "displayName": "FreePlan",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.free-plan",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PaidPlan": {
+      "displayName": "PaidPlan",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.paid-plan",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Ambasadors": {
+      "displayName": "Ambasadors",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.ambasadors",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FAQ": {
+      "displayName": "FAQ",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.faq",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Technic": {
+      "displayName": "Technic",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.technic",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Way": {
+      "displayName": "Way",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.way",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "CTO": {
+      "displayName": "CTO",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.cto",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_about_ways",
+  "info": {
+    "displayName": "Way",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonLink": {
+      "type": "string"
+    },
+    "ButtonTarget": {
+      "type": "boolean",
+      "default": false
+    },
+    "WayList": {
+      "displayName": "WayList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.way-list",
+      "max": 6
+    }
+  }
+}

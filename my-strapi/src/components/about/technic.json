@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_technics",
+  "info": {
+    "displayName": "Technic",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Undertitle": {
+      "type": "string"
+    },
+    "TechnicList": {
+      "displayName": "TechnicList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.technic-list"
+    }
+  }
+}

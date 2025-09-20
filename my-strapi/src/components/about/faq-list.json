@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_faq_lists",
+  "info": {
+    "displayName": "FAQList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "text"
+    },
+    "Answer": {
+      "type": "text"
+    }
+  }
+}

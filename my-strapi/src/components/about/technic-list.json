@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_about_technic_lists",
+  "info": {
+    "displayName": "TechnicList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Item": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_ambasadors",
+  "info": {
+    "displayName": "Ambasadors",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Tag": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "AmbasadorsList": {
+      "displayName": "AmbasadorsList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.ambasadors-list",
+      "max": 3
+    }
+  }
+}

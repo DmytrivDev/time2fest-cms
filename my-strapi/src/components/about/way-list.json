@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_about_way_lists",
+  "info": {
+    "displayName": "WayList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Item": {
+      "type": "string"
+    }
+  }
+}

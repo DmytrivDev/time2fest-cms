@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_about_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "FAQList": {
+      "displayName": "FAQList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.faq-list"
+    }
+  }
+}

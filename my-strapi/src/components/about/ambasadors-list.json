@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_ambasadors_lists",
+  "info": {
+    "displayName": "AmbasadorsList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_steps",
+  "info": {
+    "displayName": "Steps",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "StrpsList": {
+      "displayName": "StrpsList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.strps-list",
+      "max": 4
+    }
+  }
+}

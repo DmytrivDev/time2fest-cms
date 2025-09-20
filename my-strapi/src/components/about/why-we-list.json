@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_why_we_lists",
+  "info": {
+    "displayName": "WhyWeList",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Desc": {
+      "type": "string"
+    }
+  }
+}

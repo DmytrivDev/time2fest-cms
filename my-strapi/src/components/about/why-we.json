@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_why_wes",
+  "info": {
+    "displayName": "WhyWe",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "WhyWeList": {
+      "displayName": "WhyWeList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.why-we-list"
+    }
+  }
+}

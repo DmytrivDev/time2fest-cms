@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_paid_plans",
+  "info": {
+    "displayName": "PaidPlan",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "PaidPlanList": {
+      "displayName": "PaidPlanList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.paid-plan-list",
+      "max": 3
+    }
+  }
+}

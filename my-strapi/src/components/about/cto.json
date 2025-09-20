@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_ctos",
+  "info": {
+    "displayName": "CTO",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title1": {
+      "type": "text"
+    },
+    "Title2": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

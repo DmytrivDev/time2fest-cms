@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_free_plan_lists",
+  "info": {
+    "displayName": "FreePlanList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

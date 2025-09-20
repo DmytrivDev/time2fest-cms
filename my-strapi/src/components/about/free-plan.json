@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_free_plans",
+  "info": {
+    "displayName": "FreePlan",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Undertitle": {
+      "type": "string"
+    },
+    "FreePlanList": {
+      "displayName": "FreePlanList",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.free-plan-list",
+      "max": 4
+    }
+  }
+}

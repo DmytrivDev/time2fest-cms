@@ -15,6 +15,107 @@ export interface AboutAboutItems extends Struct.ComponentSchema {
   };
 }
 
+export interface AboutAmbasadors extends Struct.ComponentSchema {
+  collectionName: 'components_about_ambasadors';
+  info: {
+    displayName: 'Ambasadors';
+    icon: 'dashboard';
+  };
+  attributes: {
+    AmbasadorsList: Schema.Attribute.Component<'about.ambasadors-list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
+    Tag: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutAmbasadorsList extends Struct.ComponentSchema {
+  collectionName: 'components_about_ambasadors_lists';
+  info: {
+    displayName: 'AmbasadorsList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Name: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutCto extends Struct.ComponentSchema {
+  collectionName: 'components_about_ctos';
+  info: {
+    displayName: 'CTO';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images'>;
+    Text: Schema.Attribute.Text;
+    Title1: Schema.Attribute.Text;
+    Title2: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutFaq extends Struct.ComponentSchema {
+  collectionName: 'components_about_faqs';
+  info: {
+    displayName: 'FAQ';
+    icon: 'dashboard';
+  };
+  attributes: {
+    FAQList: Schema.Attribute.Component<'about.faq-list', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutFaqList extends Struct.ComponentSchema {
+  collectionName: 'components_about_faq_lists';
+  info: {
+    displayName: 'FAQList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Answer: Schema.Attribute.Text;
+    Question: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutFreePlan extends Struct.ComponentSchema {
+  collectionName: 'components_about_free_plans';
+  info: {
+    displayName: 'FreePlan';
+    icon: 'dashboard';
+  };
+  attributes: {
+    FreePlanList: Schema.Attribute.Component<'about.free-plan-list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    Title: Schema.Attribute.String;
+    Undertitle: Schema.Attribute.String;
+  };
+}
+
+export interface AboutFreePlanList extends Struct.ComponentSchema {
+  collectionName: 'components_about_free_plan_lists';
+  info: {
+    displayName: 'FreePlanList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
 export interface AboutHero extends Struct.ComponentSchema {
   collectionName: 'components_about_heroes';
   info: {
@@ -28,6 +129,152 @@ export interface AboutHero extends Struct.ComponentSchema {
     Text: Schema.Attribute.Text;
     Title: Schema.Attribute.String;
     Undertitle: Schema.Attribute.Text;
+  };
+}
+
+export interface AboutPaidPlan extends Struct.ComponentSchema {
+  collectionName: 'components_about_paid_plans';
+  info: {
+    displayName: 'PaidPlan';
+    icon: 'dashboard';
+  };
+  attributes: {
+    PaidPlanList: Schema.Attribute.Component<'about.paid-plan-list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
+    Price: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutPaidPlanList extends Struct.ComponentSchema {
+  collectionName: 'components_about_paid_plan_lists';
+  info: {
+    displayName: 'PaidPlanList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutSteps extends Struct.ComponentSchema {
+  collectionName: 'components_about_steps';
+  info: {
+    displayName: 'Steps';
+    icon: 'dashboard';
+  };
+  attributes: {
+    StrpsList: Schema.Attribute.Component<'about.strps-list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface AboutStrpsList extends Struct.ComponentSchema {
+  collectionName: 'components_about_strps_lists';
+  info: {
+    displayName: 'StrpsList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Text: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutTechnic extends Struct.ComponentSchema {
+  collectionName: 'components_about_technics';
+  info: {
+    displayName: 'Technic';
+    icon: 'dashboard';
+  };
+  attributes: {
+    TechnicList: Schema.Attribute.Component<'about.technic-list', true>;
+    Title: Schema.Attribute.String;
+    Undertitle: Schema.Attribute.String;
+  };
+}
+
+export interface AboutTechnicList extends Struct.ComponentSchema {
+  collectionName: 'components_about_technic_lists';
+  info: {
+    displayName: 'TechnicList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Item: Schema.Attribute.String;
+  };
+}
+
+export interface AboutWay extends Struct.ComponentSchema {
+  collectionName: 'components_about_ways';
+  info: {
+    displayName: 'Way';
+    icon: 'dashboard';
+  };
+  attributes: {
+    ButtonLink: Schema.Attribute.String;
+    ButtonTarget: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    ButtonText: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+    WayList: Schema.Attribute.Component<'about.way-list', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 6;
+        },
+        number
+      >;
+  };
+}
+
+export interface AboutWayList extends Struct.ComponentSchema {
+  collectionName: 'components_about_way_lists';
+  info: {
+    displayName: 'WayList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Item: Schema.Attribute.String;
+  };
+}
+
+export interface AboutWhyWe extends Struct.ComponentSchema {
+  collectionName: 'components_about_why_wes';
+  info: {
+    displayName: 'WhyWe';
+    icon: 'dashboard';
+  };
+  attributes: {
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+    WhyWeList: Schema.Attribute.Component<'about.why-we-list', true>;
+  };
+}
+
+export interface AboutWhyWeList extends Struct.ComponentSchema {
+  collectionName: 'components_about_why_we_lists';
+  info: {
+    description: '';
+    displayName: 'WhyWeList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Desc: Schema.Attribute.String;
+    Icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -88,7 +335,24 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about.about-items': AboutAboutItems;
+      'about.ambasadors': AboutAmbasadors;
+      'about.ambasadors-list': AboutAmbasadorsList;
+      'about.cto': AboutCto;
+      'about.faq': AboutFaq;
+      'about.faq-list': AboutFaqList;
+      'about.free-plan': AboutFreePlan;
+      'about.free-plan-list': AboutFreePlanList;
       'about.hero': AboutHero;
+      'about.paid-plan': AboutPaidPlan;
+      'about.paid-plan-list': AboutPaidPlanList;
+      'about.steps': AboutSteps;
+      'about.strps-list': AboutStrpsList;
+      'about.technic': AboutTechnic;
+      'about.technic-list': AboutTechnicList;
+      'about.way': AboutWay;
+      'about.way-list': AboutWayList;
+      'about.why-we': AboutWhyWe;
+      'about.why-we-list': AboutWhyWeList;
       'become-streamer.become-streamer': BecomeStreamerBecomeStreamer;
       'faq.faq': FaqFaq;
       'hero.hero-infographik': HeroHeroInfographik;
