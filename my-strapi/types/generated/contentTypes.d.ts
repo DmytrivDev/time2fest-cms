@@ -527,6 +527,12 @@ export interface ApiAmbassPageAmbassPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    AmbassSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

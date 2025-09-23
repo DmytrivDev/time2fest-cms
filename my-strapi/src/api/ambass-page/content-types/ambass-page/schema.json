@@ -80,6 +80,16 @@
           "localized": true
         }
       }
+    },
+    "AmbassSeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
