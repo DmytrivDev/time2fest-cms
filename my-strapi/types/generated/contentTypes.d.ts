@@ -615,7 +615,7 @@ export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     policy: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
-    socialLinks: Schema.Attribute.Text;
+    socialLinks: Schema.Attribute.JSON;
     streamLang: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

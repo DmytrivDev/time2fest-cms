@@ -26,9 +26,6 @@
     "contactLink": {
       "type": "string"
     },
-    "socialLinks": {
-      "type": "text"
-    },
     "experience": {
       "type": "string"
     },
@@ -43,6 +40,9 @@
     },
     "policy": {
       "type": "boolean"
+    },
+    "socialLinks": {
+      "type": "json"
     }
   }
 }
