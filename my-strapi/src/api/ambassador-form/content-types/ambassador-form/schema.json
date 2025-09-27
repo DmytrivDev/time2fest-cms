@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "ambassador_forms",
+  "info": {
+    "singularName": "ambassador-form",
+    "pluralName": "ambassador-forms",
+    "displayName": "AmbassadorForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "AmbassadorFormSeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
