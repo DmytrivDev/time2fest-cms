@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "ambassador_forms",
+  "collectionName": "form_pages",
   "info": {
-    "singularName": "ambassador-form",
-    "pluralName": "ambassador-forms",
-    "displayName": "AmbassadorForm"
+    "singularName": "form-page",
+    "pluralName": "form-pages",
+    "displayName": "FormPage"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "AmbassadorFormSeoMeta": {
+    "FormSeoMeta": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-meta",

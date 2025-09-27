@@ -584,44 +584,6 @@ export interface ApiAmbassPageAmbassPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiAmbassadorFormAmbassadorForm
-  extends Struct.SingleTypeSchema {
-  collectionName: 'ambassador_forms';
-  info: {
-    displayName: 'AmbassadorForm';
-    pluralName: 'ambassador-forms';
-    singularName: 'ambassador-form';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    AmbassadorFormSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ambassador-form.ambassador-form'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
   collectionName: 'ambassadors';
   info: {
@@ -810,6 +772,43 @@ export interface ApiFaqFaq extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFormPageFormPage extends Struct.SingleTypeSchema {
+  collectionName: 'form_pages';
+  info: {
+    displayName: 'FormPage';
+    pluralName: 'form-pages';
+    singularName: 'form-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FormSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-page.form-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1500,11 +1499,11 @@ declare module '@strapi/strapi' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::about-platform.about-platform': ApiAboutPlatformAboutPlatform;
       'api::ambass-page.ambass-page': ApiAmbassPageAmbassPage;
-      'api::ambassador-form.ambassador-form': ApiAmbassadorFormAmbassadorForm;
       'api::ambassador.ambassador': ApiAmbassadorAmbassador;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
       'api::country.country': ApiCountryCountry;
       'api::faq.faq': ApiFaqFaq;
+      'api::form-page.form-page': ApiFormPageFormPage;
       'api::home-hero-section.home-hero-section': ApiHomeHeroSectionHomeHeroSection;
       'api::home-seo-meta.home-seo-meta': ApiHomeSeoMetaHomeSeoMeta;
       'api::time-zone.time-zone': ApiTimeZoneTimeZone;
