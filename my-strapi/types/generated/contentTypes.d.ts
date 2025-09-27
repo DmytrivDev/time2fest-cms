@@ -584,6 +584,45 @@ export interface ApiAmbassPageAmbassPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
+  collectionName: 'ambassadors';
+  info: {
+    description: '';
+    displayName: 'Ambassadors';
+    pluralName: 'ambassadors';
+    singularName: 'ambassador';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    age: Schema.Attribute.String;
+    contactLink: Schema.Attribute.String;
+    contactMethod: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    englishLevel: Schema.Attribute.String;
+    experience: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambassador.ambassador'
+    > &
+      Schema.Attribute.Private;
+    motivation: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    policy: Schema.Attribute.Boolean;
+    publishedAt: Schema.Attribute.DateTime;
+    socialLinks: Schema.Attribute.Text;
+    streamLang: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBecomeStreamerBecomeStreamer
   extends Struct.SingleTypeSchema {
   collectionName: 'become_streamers';
@@ -1423,6 +1462,7 @@ declare module '@strapi/strapi' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::about-platform.about-platform': ApiAboutPlatformAboutPlatform;
       'api::ambass-page.ambass-page': ApiAmbassPageAmbassPage;
+      'api::ambassador.ambassador': ApiAmbassadorAmbassador;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
       'api::country.country': ApiCountryCountry;
       'api::faq.faq': ApiFaqFaq;

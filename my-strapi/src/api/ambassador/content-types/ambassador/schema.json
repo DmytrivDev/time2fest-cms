@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ambassadors",
+  "info": {
+    "singularName": "ambassador",
+    "pluralName": "ambassadors",
+    "displayName": "Ambassadors",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    },
+    "contactMethod": {
+      "type": "string"
+    },
+    "contactLink": {
+      "type": "string"
+    },
+    "socialLinks": {
+      "type": "text"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "englishLevel": {
+      "type": "string"
+    },
+    "streamLang": {
+      "type": "string"
+    },
+    "motivation": {
+      "type": "text"
+    },
+    "policy": {
+      "type": "boolean"
+    }
+  }
+}
