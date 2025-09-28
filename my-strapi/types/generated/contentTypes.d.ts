@@ -977,7 +977,7 @@ export interface ApiPolictPagePolictPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::polict-page.polict-page'
     >;
-    PolicySeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+    PolictSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "PolicySeoMeta": {
+    "PolictSeoMeta": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-meta",
