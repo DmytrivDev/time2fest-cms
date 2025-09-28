@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "agreement_pages",
+  "info": {
+    "singularName": "agreement-page",
+    "pluralName": "agreement-pages",
+    "displayName": "AgreementPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "AgreementSeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TextComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.text-component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

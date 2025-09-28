@@ -510,6 +510,49 @@ export interface ApiAboutPlatformAboutPlatform extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAgreementPageAgreementPage extends Struct.SingleTypeSchema {
+  collectionName: 'agreement_pages';
+  info: {
+    displayName: 'AgreementPage';
+    pluralName: 'agreement-pages';
+    singularName: 'agreement-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    AgreementSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::agreement-page.agreement-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    TextComponent: Schema.Attribute.Component<'general.text-component', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAmbassPageAmbassPage extends Struct.SingleTypeSchema {
   collectionName: 'ambass_pages';
   info: {
@@ -984,6 +1027,93 @@ export interface ApiPolictPagePolictPage extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    TextComponent: Schema.Attribute.Component<'general.text-component', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiResponsibilityPageResponsibilityPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'responsibility_pages';
+  info: {
+    displayName: 'ResponsibilityPage';
+    pluralName: 'responsibility-pages';
+    singularName: 'responsibility-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::responsibility-page.responsibility-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    ResponsibilitySeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    TextComponent: Schema.Attribute.Component<'general.text-component', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTermsPageTermsPage extends Struct.SingleTypeSchema {
+  collectionName: 'terms_pages';
+  info: {
+    displayName: 'TermsPage';
+    pluralName: 'terms-pages';
+    singularName: 'terms-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::terms-page.terms-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    TermsSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     TextComponent: Schema.Attribute.Component<'general.text-component', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1542,6 +1672,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::about-platform.about-platform': ApiAboutPlatformAboutPlatform;
+      'api::agreement-page.agreement-page': ApiAgreementPageAgreementPage;
       'api::ambass-page.ambass-page': ApiAmbassPageAmbassPage;
       'api::ambassador.ambassador': ApiAmbassadorAmbassador;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
@@ -1551,6 +1682,8 @@ declare module '@strapi/strapi' {
       'api::home-hero-section.home-hero-section': ApiHomeHeroSectionHomeHeroSection;
       'api::home-seo-meta.home-seo-meta': ApiHomeSeoMetaHomeSeoMeta;
       'api::polict-page.polict-page': ApiPolictPagePolictPage;
+      'api::responsibility-page.responsibility-page': ApiResponsibilityPageResponsibilityPage;
+      'api::terms-page.terms-page': ApiTermsPageTermsPage;
       'api::time-zone.time-zone': ApiTimeZoneTimeZone;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

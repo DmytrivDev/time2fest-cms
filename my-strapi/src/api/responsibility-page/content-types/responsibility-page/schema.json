@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "responsibility_pages",
+  "info": {
+    "singularName": "responsibility-page",
+    "pluralName": "responsibility-pages",
+    "displayName": "ResponsibilityPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "ResponsibilitySeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TextComponent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.text-component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
