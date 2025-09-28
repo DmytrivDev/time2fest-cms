@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "polict_pages",
+  "info": {
+    "singularName": "polict-page",
+    "pluralName": "polict-pages",
+    "displayName": "PolicyPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "PolicySeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TextComponent": {
+      "displayName": "TextComponent",
+      "type": "component",
+      "repeatable": false,
+      "component": "general.text-component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

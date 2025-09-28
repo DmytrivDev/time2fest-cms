@@ -952,6 +952,50 @@ export interface ApiHomeSeoMetaHomeSeoMeta extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPolictPagePolictPage extends Struct.SingleTypeSchema {
+  collectionName: 'polict_pages';
+  info: {
+    description: '';
+    displayName: 'PolicyPage';
+    pluralName: 'polict-pages';
+    singularName: 'polict-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::polict-page.polict-page'
+    >;
+    PolicySeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    TextComponent: Schema.Attribute.Component<'general.text-component', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTimeZoneTimeZone extends Struct.CollectionTypeSchema {
   collectionName: 'time_zones';
   info: {
@@ -1506,6 +1550,7 @@ declare module '@strapi/strapi' {
       'api::form-page.form-page': ApiFormPageFormPage;
       'api::home-hero-section.home-hero-section': ApiHomeHeroSectionHomeHeroSection;
       'api::home-seo-meta.home-seo-meta': ApiHomeSeoMetaHomeSeoMeta;
+      'api::polict-page.polict-page': ApiPolictPagePolictPage;
       'api::time-zone.time-zone': ApiTimeZoneTimeZone;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

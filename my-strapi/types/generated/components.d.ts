@@ -445,6 +445,18 @@ export interface FaqFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralTextComponent extends Struct.ComponentSchema {
+  collectionName: 'components_general_text_components';
+  info: {
+    displayName: 'TextComponent';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Text: Schema.Attribute.RichText;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface HeroHeroInfographik extends Struct.ComponentSchema {
   collectionName: 'components_hero_hero_infographiks';
   info: {
@@ -508,6 +520,7 @@ declare module '@strapi/strapi' {
       'ambassador.what-get-list': AmbassadorWhatGetList;
       'become-streamer.become-streamer': BecomeStreamerBecomeStreamer;
       'faq.faq': FaqFaq;
+      'general.text-component': GeneralTextComponent;
       'hero.hero-infographik': HeroHeroInfographik;
       'seo.seo-meta': SeoSeoMeta;
     }

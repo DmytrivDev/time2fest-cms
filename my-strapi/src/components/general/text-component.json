@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_general_text_components",
+  "info": {
+    "displayName": "TextComponent",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "richtext"
+    }
+  }
+}
