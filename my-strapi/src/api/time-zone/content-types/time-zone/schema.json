@@ -30,6 +30,12 @@
       "relation": "manyToMany",
       "target": "api::country.country",
       "mappedBy": "time_zones"
+    },
+    "ambassadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ambassadors-list.ambassadors-list",
+      "mappedBy": "time_zone"
     }
   }
 }

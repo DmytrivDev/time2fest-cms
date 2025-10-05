@@ -631,7 +631,7 @@ export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
   collectionName: 'ambassadors';
   info: {
     description: '';
-    displayName: 'Ambassadors';
+    displayName: 'AmbassadorsForm';
     pluralName: 'ambassadors';
     singularName: 'ambassador';
   };
@@ -640,6 +640,10 @@ export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
   };
   attributes: {
     age: Schema.Attribute.String;
+    ambassadors: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambassadors-list.ambassadors-list'
+    >;
     contactLink: Schema.Attribute.String;
     contactMethod: Schema.Attribute.String;
     country: Schema.Attribute.String;
@@ -660,6 +664,60 @@ export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     socialLinks: Schema.Attribute.JSON;
     streamLang: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAmbassadorsListAmbassadorsList
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ambassadors_lists';
+  info: {
+    description: '';
+    displayName: 'AmbassadorsList';
+    pluralName: 'ambassadors-lists';
+    singularName: 'ambassadors-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    country: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::ambassador.ambassador'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambassadors-list.ambassadors-list'
+    >;
+    Name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    time_zone: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::time-zone.time-zone'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1143,6 +1201,10 @@ export interface ApiTimeZoneTimeZone extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    ambassadors: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambassadors-list.ambassadors-list'
+    >;
     code: Schema.Attribute.String & Schema.Attribute.Required;
     countries: Schema.Attribute.Relation<'manyToMany', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;
@@ -1675,6 +1737,7 @@ declare module '@strapi/strapi' {
       'api::agreement-page.agreement-page': ApiAgreementPageAgreementPage;
       'api::ambass-page.ambass-page': ApiAmbassPageAmbassPage;
       'api::ambassador.ambassador': ApiAmbassadorAmbassador;
+      'api::ambassadors-list.ambassadors-list': ApiAmbassadorsListAmbassadorsList;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
       'api::country.country': ApiCountryCountry;
       'api::faq.faq': ApiFaqFaq;

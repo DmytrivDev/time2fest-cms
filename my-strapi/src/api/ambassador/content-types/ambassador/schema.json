@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ambassador",
     "pluralName": "ambassadors",
-    "displayName": "Ambassadors",
+    "displayName": "AmbassadorsForm",
     "description": ""
   },
   "options": {
@@ -43,6 +43,12 @@
     },
     "socialLinks": {
       "type": "json"
+    },
+    "ambassadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ambassadors-list.ambassadors-list",
+      "mappedBy": "country"
     }
   }
 }
