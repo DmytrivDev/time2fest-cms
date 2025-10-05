@@ -52,7 +52,7 @@
     "country": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::ambassador.ambassador",
+      "target": "api::country.country",
       "inversedBy": "ambassadors"
     }
   }
