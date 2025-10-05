@@ -688,10 +688,7 @@ export interface ApiAmbassadorsListAmbassadorsList
     };
   };
   attributes: {
-    country: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::ambassador.ambassador'
-    >;
+    country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -804,6 +801,10 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    ambassadors: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambassadors-list.ambassadors-list'
+    >;
     CountryCode: Schema.Attribute.String & Schema.Attribute.Required;
     CountryDesc: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
