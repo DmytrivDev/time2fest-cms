@@ -390,6 +390,12 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    AboutSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Ambasadors: Schema.Attribute.Component<'about.ambasadors', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
