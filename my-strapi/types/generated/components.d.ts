@@ -445,6 +445,29 @@ export interface FaqFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralSocials extends Struct.ComponentSchema {
+  collectionName: 'components_general_socials';
+  info: {
+    displayName: 'Socials';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Link: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralSocialsLinks extends Struct.ComponentSchema {
+  collectionName: 'components_general_socials_links';
+  info: {
+    displayName: 'SocialsLinks';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Link: Schema.Attribute.String;
+    Name: Schema.Attribute.String;
+  };
+}
+
 export interface GeneralTextComponent extends Struct.ComponentSchema {
   collectionName: 'components_general_text_components';
   info: {
@@ -520,6 +543,8 @@ declare module '@strapi/strapi' {
       'ambassador.what-get-list': AmbassadorWhatGetList;
       'become-streamer.become-streamer': BecomeStreamerBecomeStreamer;
       'faq.faq': FaqFaq;
+      'general.socials': GeneralSocials;
+      'general.socials-links': GeneralSocialsLinks;
       'general.text-component': GeneralTextComponent;
       'hero.hero-infographik': HeroHeroInfographik;
       'seo.seo-meta': SeoSeoMeta;

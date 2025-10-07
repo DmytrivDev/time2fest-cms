@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_general_socials",
+  "info": {
+    "displayName": "Socials",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "string"
+    }
+  }
+}

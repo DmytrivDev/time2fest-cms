@@ -704,6 +704,14 @@ export interface ApiAmbassadorsListAmbassadorsList
           localized: true;
         };
       }>;
+    FullDescription: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Gender: Schema.Attribute.Enumeration<['Male', 'Famale']>;
+    Languages: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'English'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -717,6 +725,7 @@ export interface ApiAmbassadorsListAmbassadorsList
       }>;
     Photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
+    SocialLinks: Schema.Attribute.Component<'general.socials-links', true>;
     time_zone: Schema.Attribute.Relation<
       'manyToOne',
       'api::time-zone.time-zone'
@@ -724,6 +733,12 @@ export interface ApiAmbassadorsListAmbassadorsList
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Video: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
