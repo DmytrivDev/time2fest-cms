@@ -725,6 +725,7 @@ export interface ApiAmbassadorsListAmbassadorsList
       }>;
     Photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
     SocialLinks: Schema.Attribute.Component<'general.socials-links', true>;
     time_zone: Schema.Attribute.Relation<
       'manyToOne',

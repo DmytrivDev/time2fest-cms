@@ -93,6 +93,10 @@
         "Male",
         "Famale"
       ]
+    },
+    "slug": {
+      "type": "string",
+      "required": true
     }
   }
 }
