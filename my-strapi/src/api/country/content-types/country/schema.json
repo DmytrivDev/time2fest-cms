@@ -63,6 +63,10 @@
           "localized": true
         }
       }
+    },
+    "slug": {
+      "type": "string",
+      "required": true
     }
   }
 }

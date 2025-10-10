@@ -857,6 +857,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
     time_zones: Schema.Attribute.Relation<
       'manyToMany',
       'api::time-zone.time-zone'
