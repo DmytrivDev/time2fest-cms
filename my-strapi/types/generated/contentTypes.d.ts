@@ -828,6 +828,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::ambassadors-list.ambassadors-list'
     >;
+    Background: Schema.Attribute.Media<'images'>;
     CountryCode: Schema.Attribute.String & Schema.Attribute.Required;
     CountryDesc: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{

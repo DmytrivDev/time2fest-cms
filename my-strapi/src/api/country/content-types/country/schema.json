@@ -67,6 +67,13 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "Background": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
