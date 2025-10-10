@@ -483,15 +483,13 @@ export interface GeneralTextComponent extends Struct.ComponentSchema {
 export interface GeneralTimezoneDetail extends Struct.ComponentSchema {
   collectionName: 'components_general_timezone_details';
   info: {
+    description: '';
     displayName: 'TimezoneDetail';
     icon: 'bulletList';
   };
   attributes: {
     Ambassador: Schema.Attribute.Boolean;
-    time_zone: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::time-zone.time-zone'
-    >;
+    code: Schema.Attribute.Relation<'oneToOne', 'api::time-zone.time-zone'>;
     VebCamera: Schema.Attribute.Boolean;
   };
 }
