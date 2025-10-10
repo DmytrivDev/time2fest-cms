@@ -480,6 +480,22 @@ export interface GeneralTextComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralTimezoneDetail extends Struct.ComponentSchema {
+  collectionName: 'components_general_timezone_details';
+  info: {
+    displayName: 'TimezoneDetail';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Ambassador: Schema.Attribute.Boolean;
+    time_zone: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::time-zone.time-zone'
+    >;
+    VebCamera: Schema.Attribute.Boolean;
+  };
+}
+
 export interface HeroHeroInfographik extends Struct.ComponentSchema {
   collectionName: 'components_hero_hero_infographiks';
   info: {
@@ -546,6 +562,7 @@ declare module '@strapi/strapi' {
       'general.socials': GeneralSocials;
       'general.socials-links': GeneralSocialsLinks;
       'general.text-component': GeneralTextComponent;
+      'general.timezone-detail': GeneralTimezoneDetail;
       'hero.hero-infographik': HeroHeroInfographik;
       'seo.seo-meta': SeoSeoMeta;
     }

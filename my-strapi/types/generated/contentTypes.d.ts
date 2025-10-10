@@ -810,6 +810,7 @@ export interface ApiBecomeStreamerBecomeStreamer
 export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   collectionName: 'countries';
   info: {
+    description: '';
     displayName: 'Country';
     pluralName: 'countries';
     singularName: 'country';
@@ -850,10 +851,17 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
       'api::country.country'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    ShortDesc: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     time_zones: Schema.Attribute.Relation<
       'manyToMany',
       'api::time-zone.time-zone'
     >;
+    TimezoneDetail: Schema.Attribute.Component<'general.timezone-detail', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

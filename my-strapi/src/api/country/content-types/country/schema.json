@@ -4,7 +4,8 @@
   "info": {
     "singularName": "country",
     "pluralName": "countries",
-    "displayName": "Country"
+    "displayName": "Country",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -48,6 +49,20 @@
       "relation": "oneToMany",
       "target": "api::ambassadors-list.ambassadors-list",
       "mappedBy": "country"
+    },
+    "TimezoneDetail": {
+      "displayName": "TimezoneDetail",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.timezone-detail"
+    },
+    "ShortDesc": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

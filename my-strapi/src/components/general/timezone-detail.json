@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_timezone_details",
+  "info": {
+    "displayName": "TimezoneDetail",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "time_zone": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::time-zone.time-zone"
+    },
+    "VebCamera": {
+      "type": "boolean"
+    },
+    "Ambassador": {
+      "type": "boolean"
+    }
+  }
+}
