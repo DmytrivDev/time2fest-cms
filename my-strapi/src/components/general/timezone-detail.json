@@ -2,11 +2,12 @@
   "collectionName": "components_general_timezone_details",
   "info": {
     "displayName": "TimezoneDetail",
-    "icon": "bulletList"
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "time_zone": {
+    "code": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::time-zone.time-zone"
