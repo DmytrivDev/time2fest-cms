@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_country_galleries",
+  "info": {
+    "displayName": "Gallery",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Photos": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

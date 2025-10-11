@@ -432,6 +432,17 @@ export interface BecomeStreamerBecomeStreamer extends Struct.ComponentSchema {
   };
 }
 
+export interface CountryGallery extends Struct.ComponentSchema {
+  collectionName: 'components_country_galleries';
+  info: {
+    displayName: 'Gallery';
+    icon: 'apps';
+  };
+  attributes: {
+    Photos: Schema.Attribute.Media<'images', true>;
+  };
+}
+
 export interface FaqFaq extends Struct.ComponentSchema {
   collectionName: 'components_faq_faqs';
   info: {
@@ -556,6 +567,7 @@ declare module '@strapi/strapi' {
       'ambassador.what-get': AmbassadorWhatGet;
       'ambassador.what-get-list': AmbassadorWhatGetList;
       'become-streamer.become-streamer': BecomeStreamerBecomeStreamer;
+      'country.gallery': CountryGallery;
       'faq.faq': FaqFaq;
       'general.socials': GeneralSocials;
       'general.socials-links': GeneralSocialsLinks;
