@@ -7,16 +7,14 @@
   },
   "options": {},
   "attributes": {
-    "code": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::time-zone.time-zone"
-    },
     "VebCamera": {
       "type": "boolean"
     },
     "Ambassador": {
       "type": "boolean"
+    },
+    "Zone": {
+      "type": "string"
     }
   }
 }

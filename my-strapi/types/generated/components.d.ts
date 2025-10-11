@@ -489,8 +489,8 @@ export interface GeneralTimezoneDetail extends Struct.ComponentSchema {
   };
   attributes: {
     Ambassador: Schema.Attribute.Boolean;
-    code: Schema.Attribute.Relation<'oneToOne', 'api::time-zone.time-zone'>;
     VebCamera: Schema.Attribute.Boolean;
+    Zone: Schema.Attribute.String;
   };
 }
 
