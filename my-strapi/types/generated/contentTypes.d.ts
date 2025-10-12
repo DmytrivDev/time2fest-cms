@@ -807,6 +807,43 @@ export interface ApiBecomeStreamerBecomeStreamer
   };
 }
 
+export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
+  collectionName: 'contact_pages';
+  info: {
+    displayName: 'ContactPage';
+    pluralName: 'contact-pages';
+    singularName: 'contact-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    ContactSoeMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-page.contact-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   collectionName: 'countries';
   info: {
@@ -1773,6 +1810,7 @@ declare module '@strapi/strapi' {
       'api::ambassador.ambassador': ApiAmbassadorAmbassador;
       'api::ambassadors-list.ambassadors-list': ApiAmbassadorsListAmbassadorsList;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::country.country': ApiCountryCountry;
       'api::faq.faq': ApiFaqFaq;
       'api::form-page.form-page': ApiFormPageFormPage;
