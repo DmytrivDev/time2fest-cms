@@ -81,6 +81,14 @@
       "type": "component",
       "repeatable": false,
       "component": "country.gallery"
+    },
+    "CountrySec": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
