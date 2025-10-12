@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "ambassadors_list_pages",
+  "info": {
+    "singularName": "ambassadors-list-page",
+    "pluralName": "ambassadors-list-pages",
+    "displayName": "AmbassadorsListPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "AmbassadorsListSeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

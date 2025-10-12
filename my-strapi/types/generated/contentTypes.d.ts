@@ -676,6 +676,44 @@ export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAmbassadorsListPageAmbassadorsListPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ambassadors_list_pages';
+  info: {
+    displayName: 'AmbassadorsListPage';
+    pluralName: 'ambassadors-list-pages';
+    singularName: 'ambassadors-list-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    AmbassadorsListSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ambassadors-list-page.ambassadors-list-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAmbassadorsListAmbassadorsList
   extends Struct.CollectionTypeSchema {
   collectionName: 'ambassadors_lists';
@@ -1809,6 +1847,7 @@ declare module '@strapi/strapi' {
       'api::agreement-page.agreement-page': ApiAgreementPageAgreementPage;
       'api::ambass-page.ambass-page': ApiAmbassPageAmbassPage;
       'api::ambassador.ambassador': ApiAmbassadorAmbassador;
+      'api::ambassadors-list-page.ambassadors-list-page': ApiAmbassadorsListPageAmbassadorsListPage;
       'api::ambassadors-list.ambassadors-list': ApiAmbassadorsListAmbassadorsList;
       'api::become-streamer.become-streamer': ApiBecomeStreamerBecomeStreamer;
       'api::contact-page.contact-page': ApiContactPageContactPage;
