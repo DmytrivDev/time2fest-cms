@@ -810,6 +810,7 @@ export interface ApiBecomeStreamerBecomeStreamer
 export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
   collectionName: 'contact_pages';
   info: {
+    description: '';
     displayName: 'ContactPage';
     pluralName: 'contact-pages';
     singularName: 'contact-page';
@@ -823,7 +824,7 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    ContactSoeMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
+    ContactSeoMeta: Schema.Attribute.Component<'seo.seo-meta', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

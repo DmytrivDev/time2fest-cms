@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact-page",
     "pluralName": "contact-pages",
-    "displayName": "ContactPage"
+    "displayName": "ContactPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "ContactSoeMeta": {
+    "ContactSeoMeta": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-meta",
