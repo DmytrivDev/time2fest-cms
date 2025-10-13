@@ -71,7 +71,12 @@
     },
     "Languages": {
       "type": "text",
-      "default": "English"
+      "default": "English",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "FullDescription": {
       "type": "richtext",
