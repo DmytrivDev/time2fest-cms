@@ -749,7 +749,13 @@ export interface ApiAmbassadorsListAmbassadorsList
         };
       }>;
     Gender: Schema.Attribute.Enumeration<['Male', 'Famale']>;
-    Languages: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'English'>;
+    Languages: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'English'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
