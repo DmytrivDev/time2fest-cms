@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "country_pages",
+  "info": {
+    "singularName": "country-page",
+    "pluralName": "country-pages",
+    "displayName": "CountryPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "CountrySeoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-meta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
