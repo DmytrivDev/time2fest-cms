@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "profile_home_pages",
+  "info": {
+    "singularName": "profile-home-page",
+    "pluralName": "profile-home-pages",
+    "displayName": "ProfileHomePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Banner": {
+      "displayName": "Slider",
+      "type": "component",
+      "repeatable": true,
+      "component": "profile.slider",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Video": {
+      "displayName": "Video",
+      "type": "component",
+      "repeatable": false,
+      "component": "profile.video",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

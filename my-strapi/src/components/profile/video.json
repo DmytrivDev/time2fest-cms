@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_profile_videos",
+  "info": {
+    "displayName": "Video",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "VideoID": {
+      "type": "string"
+    },
+    "CountryCode": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    }
+  }
+}

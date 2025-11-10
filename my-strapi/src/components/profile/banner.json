@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_profile_banners",
+  "info": {
+    "displayName": "Banner",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    }
+  }
+}

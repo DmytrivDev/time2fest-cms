@@ -1256,6 +1256,51 @@ export interface ApiPolictPagePolictPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiProfileHomePageProfileHomePage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'profile_home_pages';
+  info: {
+    description: '';
+    displayName: 'ProfileHomePage';
+    pluralName: 'profile-home-pages';
+    singularName: 'profile-home-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Banner: Schema.Attribute.Component<'profile.slider', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::profile-home-page.profile-home-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Video: Schema.Attribute.Component<'profile.video', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
 export interface ApiResponsibilityPageResponsibilityPage
   extends Struct.SingleTypeSchema {
   collectionName: 'responsibility_pages';
@@ -1907,6 +1952,7 @@ declare module '@strapi/strapi' {
       'api::home-hero-section.home-hero-section': ApiHomeHeroSectionHomeHeroSection;
       'api::home-seo-meta.home-seo-meta': ApiHomeSeoMetaHomeSeoMeta;
       'api::polict-page.polict-page': ApiPolictPagePolictPage;
+      'api::profile-home-page.profile-home-page': ApiProfileHomePageProfileHomePage;
       'api::responsibility-page.responsibility-page': ApiResponsibilityPageResponsibilityPage;
       'api::terms-page.terms-page': ApiTermsPageTermsPage;
       'api::time-zone.time-zone': ApiTimeZoneTimeZone;

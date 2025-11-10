@@ -517,6 +517,45 @@ export interface HeroHeroInfographik extends Struct.ComponentSchema {
   };
 }
 
+export interface ProfileBanner extends Struct.ComponentSchema {
+  collectionName: 'components_profile_banners';
+  info: {
+    displayName: 'Banner';
+    icon: 'apps';
+  };
+  attributes: {
+    Title: Schema.Attribute.Text;
+  };
+}
+
+export interface ProfileSlider extends Struct.ComponentSchema {
+  collectionName: 'components_profile_sliders';
+  info: {
+    displayName: 'Slider';
+    icon: 'apps';
+  };
+  attributes: {
+    ButtonLink: Schema.Attribute.String;
+    ButtonText: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images'>;
+    Text: Schema.Attribute.Text;
+    Title: Schema.Attribute.Text;
+  };
+}
+
+export interface ProfileVideo extends Struct.ComponentSchema {
+  collectionName: 'components_profile_videos';
+  info: {
+    displayName: 'Video';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    CountryCode: Schema.Attribute.String;
+    Location: Schema.Attribute.String;
+    VideoID: Schema.Attribute.String;
+  };
+}
+
 export interface SeoSeoMeta extends Struct.ComponentSchema {
   collectionName: 'components_seo_seo_metas';
   info: {
@@ -574,6 +613,9 @@ declare module '@strapi/strapi' {
       'general.text-component': GeneralTextComponent;
       'general.timezone-detail': GeneralTimezoneDetail;
       'hero.hero-infographik': HeroHeroInfographik;
+      'profile.banner': ProfileBanner;
+      'profile.slider': ProfileSlider;
+      'profile.video': ProfileVideo;
       'seo.seo-meta': SeoSeoMeta;
     }
   }
