@@ -36,6 +36,12 @@
       "relation": "oneToMany",
       "target": "api::ambassadors-list.ambassadors-list",
       "mappedBy": "time_zone"
+    },
+    "translations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::translation.translation",
+      "mappedBy": "time_zone"
     }
   }
 }

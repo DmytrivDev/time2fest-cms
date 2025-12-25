@@ -990,6 +990,10 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
       'api::time-zone.time-zone'
     >;
     TimezoneDetail: Schema.Attribute.Component<'general.timezone-detail', true>;
+    translations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::translation.translation'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1421,9 +1425,50 @@ export interface ApiTimeZoneTimeZone extends Struct.CollectionTypeSchema {
     >;
     offcet: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    translations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::translation.translation'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTranslationTranslation extends Struct.CollectionTypeSchema {
+  collectionName: 'translations';
+  info: {
+    displayName: 'Translation';
+    pluralName: 'translations';
+    singularName: 'translation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::translation.translation'
+    > &
+      Schema.Attribute.Private;
+    name_en: Schema.Attribute.String;
+    name_es: Schema.Attribute.String;
+    name_fr: Schema.Attribute.String;
+    name_uk: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    time_zone: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::time-zone.time-zone'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    videoid: Schema.Attribute.String;
   };
 }
 
@@ -1956,6 +2001,7 @@ declare module '@strapi/strapi' {
       'api::responsibility-page.responsibility-page': ApiResponsibilityPageResponsibilityPage;
       'api::terms-page.terms-page': ApiTermsPageTermsPage;
       'api::time-zone.time-zone': ApiTimeZoneTimeZone;
+      'api::translation.translation': ApiTranslationTranslation;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

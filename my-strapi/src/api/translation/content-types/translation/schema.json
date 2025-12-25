@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "translations",
+  "info": {
+    "singularName": "translation",
+    "pluralName": "translations",
+    "displayName": "Translation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "translations"
+    },
+    "time_zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::time-zone.time-zone",
+      "inversedBy": "translations"
+    },
+    "name_uk": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "name_es": {
+      "type": "string"
+    },
+    "name_fr": {
+      "type": "string"
+    },
+    "videoid": {
+      "type": "string"
+    }
+  }
+}

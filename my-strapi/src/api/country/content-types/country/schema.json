@@ -89,6 +89,12 @@
           "localized": true
         }
       }
+    },
+    "translations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::translation.translation",
+      "mappedBy": "country"
     }
   }
 }
