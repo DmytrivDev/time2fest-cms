@@ -42,7 +42,10 @@
       "target": "api::time-zone.time-zone",
       "inversedBy": "live_streams"
     },
-    "mux_stream_key": {
+    "mux_live_stream_id": {
+      "type": "string"
+    },
+    "active_asset_id": {
       "type": "string"
     },
     "mux_playback_id": {
