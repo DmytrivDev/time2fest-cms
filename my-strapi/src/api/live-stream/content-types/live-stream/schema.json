@@ -50,6 +50,9 @@
     },
     "mux_playback_id": {
       "type": "string"
+    },
+    "max_stream_key": {
+      "type": "string"
     }
   }
 }
