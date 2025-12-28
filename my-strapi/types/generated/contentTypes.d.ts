@@ -1223,6 +1223,7 @@ export interface ApiHomeSeoMetaHomeSeoMeta extends Struct.SingleTypeSchema {
 export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
   collectionName: 'live_streams';
   info: {
+    description: '';
     displayName: 'LiveStream';
     pluralName: 'live-streams';
     singularName: 'live-stream';
@@ -1241,7 +1242,7 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       'api::live-stream.live-stream'
     > &
       Schema.Attribute.Private;
-    muxLiveStreamId: Schema.Attribute.String;
+    muxWebrtcLiveId: Schema.Attribute.String;
     playbackId: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
