@@ -1242,8 +1242,8 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       'api::live-stream.live-stream'
     > &
       Schema.Attribute.Private;
-    muxWebrtcLiveId: Schema.Attribute.String;
-    playbackId: Schema.Attribute.String;
+    mux_playback_id: Schema.Attribute.String;
+    mux_stream_key: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     time_zone: Schema.Attribute.Relation<
