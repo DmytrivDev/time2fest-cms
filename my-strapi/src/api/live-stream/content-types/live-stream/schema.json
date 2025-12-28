@@ -4,7 +4,8 @@
   "info": {
     "singularName": "live-stream",
     "pluralName": "live-streams",
-    "displayName": "LiveStream"
+    "displayName": "LiveStream",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -41,7 +42,7 @@
       "target": "api::time-zone.time-zone",
       "inversedBy": "live_streams"
     },
-    "muxLiveStreamId": {
+    "muxWebrtcLiveId": {
       "type": "string"
     },
     "playbackId": {
