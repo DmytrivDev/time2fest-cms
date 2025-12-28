@@ -42,6 +42,12 @@
       "relation": "oneToMany",
       "target": "api::translation.translation",
       "mappedBy": "time_zone"
+    },
+    "live_streams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::live-stream.live-stream",
+      "mappedBy": "time_zone"
     }
   }
 }

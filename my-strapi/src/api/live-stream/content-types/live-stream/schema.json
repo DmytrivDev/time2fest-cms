@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "live_streams",
+  "info": {
+    "singularName": "live-stream",
+    "pluralName": "live-streams",
+    "displayName": "LiveStream"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "trstatus": {
+      "type": "enumeration",
+      "enum": [
+        "prestart",
+        "process",
+        "end"
+      ],
+      "default": "prestart"
+    },
+    "title": {
+      "displayName": "title",
+      "type": "component",
+      "repeatable": false,
+      "component": "live-stream.title"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "live_streams"
+    },
+    "time_zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::time-zone.time-zone",
+      "inversedBy": "live_streams"
+    },
+    "muxLiveStreamId": {
+      "type": "string"
+    },
+    "playbackId": {
+      "type": "string"
+    }
+  }
+}

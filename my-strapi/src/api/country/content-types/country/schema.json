@@ -95,6 +95,12 @@
       "relation": "oneToMany",
       "target": "api::translation.translation",
       "mappedBy": "country"
+    },
+    "live_streams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::live-stream.live-stream",
+      "mappedBy": "country"
     }
   }
 }

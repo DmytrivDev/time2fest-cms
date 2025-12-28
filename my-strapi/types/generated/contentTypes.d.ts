@@ -972,6 +972,10 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Gallery: Schema.Attribute.Component<'country.gallery', false>;
+    live_streams: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::live-stream.live-stream'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1216,6 +1220,44 @@ export interface ApiHomeSeoMetaHomeSeoMeta extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
+  collectionName: 'live_streams';
+  info: {
+    displayName: 'LiveStream';
+    pluralName: 'live-streams';
+    singularName: 'live-stream';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::live-stream.live-stream'
+    > &
+      Schema.Attribute.Private;
+    muxLiveStreamId: Schema.Attribute.String;
+    playbackId: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    time_zone: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::time-zone.time-zone'
+    >;
+    title: Schema.Attribute.Component<'live-stream.title', false>;
+    trstatus: Schema.Attribute.Enumeration<['prestart', 'process', 'end']> &
+      Schema.Attribute.DefaultTo<'prestart'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPolictPagePolictPage extends Struct.SingleTypeSchema {
   collectionName: 'polict_pages';
   info: {
@@ -1418,6 +1460,10 @@ export interface ApiTimeZoneTimeZone extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    live_streams: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::live-stream.live-stream'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1996,6 +2042,7 @@ declare module '@strapi/strapi' {
       'api::form-page.form-page': ApiFormPageFormPage;
       'api::home-hero-section.home-hero-section': ApiHomeHeroSectionHomeHeroSection;
       'api::home-seo-meta.home-seo-meta': ApiHomeSeoMetaHomeSeoMeta;
+      'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::polict-page.polict-page': ApiPolictPagePolictPage;
       'api::profile-home-page.profile-home-page': ApiProfileHomePageProfileHomePage;
       'api::responsibility-page.responsibility-page': ApiResponsibilityPageResponsibilityPage;

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_live_stream_titles",
+  "info": {
+    "displayName": "title",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "en": {
+      "type": "string"
+    },
+    "uk": {
+      "type": "string"
+    },
+    "es": {
+      "type": "string"
+    },
+    "fr": {
+      "type": "string"
+    }
+  }
+}

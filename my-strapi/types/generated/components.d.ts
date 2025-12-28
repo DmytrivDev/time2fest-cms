@@ -517,6 +517,20 @@ export interface HeroHeroInfographik extends Struct.ComponentSchema {
   };
 }
 
+export interface LiveStreamTitle extends Struct.ComponentSchema {
+  collectionName: 'components_live_stream_titles';
+  info: {
+    displayName: 'title';
+    icon: 'apps';
+  };
+  attributes: {
+    en: Schema.Attribute.String;
+    es: Schema.Attribute.String;
+    fr: Schema.Attribute.String;
+    uk: Schema.Attribute.String;
+  };
+}
+
 export interface ProfileBanner extends Struct.ComponentSchema {
   collectionName: 'components_profile_banners';
   info: {
@@ -613,6 +627,7 @@ declare module '@strapi/strapi' {
       'general.text-component': GeneralTextComponent;
       'general.timezone-detail': GeneralTimezoneDetail;
       'hero.hero-infographik': HeroHeroInfographik;
+      'live-stream.title': LiveStreamTitle;
       'profile.banner': ProfileBanner;
       'profile.slider': ProfileSlider;
       'profile.video': ProfileVideo;
