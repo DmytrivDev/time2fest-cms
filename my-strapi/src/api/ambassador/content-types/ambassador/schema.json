@@ -49,6 +49,12 @@
       "relation": "oneToMany",
       "target": "api::ambassadors-list.ambassadors-list",
       "mappedBy": "country"
+    },
+    "live_stream": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::live-stream.live-stream",
+      "mappedBy": "ambassador"
     }
   }
 }

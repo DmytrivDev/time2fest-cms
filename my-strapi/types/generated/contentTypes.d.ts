@@ -658,6 +658,10 @@ export interface ApiAmbassadorAmbassador extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     englishLevel: Schema.Attribute.String;
     experience: Schema.Attribute.String;
+    live_stream: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::live-stream.live-stream'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1233,6 +1237,10 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
   };
   attributes: {
     active_asset_id: Schema.Attribute.String;
+    ambassador: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::ambassador.ambassador'
+    >;
     country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

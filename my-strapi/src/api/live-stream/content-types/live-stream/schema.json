@@ -56,6 +56,12 @@
     },
     "live_playback_id": {
       "type": "string"
+    },
+    "ambassador": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ambassador.ambassador",
+      "inversedBy": "live_stream"
     }
   }
 }
