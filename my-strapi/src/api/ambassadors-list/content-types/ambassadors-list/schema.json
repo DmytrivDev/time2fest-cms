@@ -102,6 +102,12 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "live_stream": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::live-stream.live-stream",
+      "mappedBy": "ambassador"
     }
   }
 }

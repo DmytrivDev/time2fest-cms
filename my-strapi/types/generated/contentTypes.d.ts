@@ -760,6 +760,10 @@ export interface ApiAmbassadorsListAmbassadorsList
         };
       }> &
       Schema.Attribute.DefaultTo<'English'>;
+    live_stream: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::live-stream.live-stream'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1239,7 +1243,7 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     active_asset_id: Schema.Attribute.String;
     ambassador: Schema.Attribute.Relation<
       'oneToOne',
-      'api::ambassador.ambassador'
+      'api::ambassadors-list.ambassadors-list'
     >;
     country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;

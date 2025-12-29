@@ -60,7 +60,7 @@
     "ambassador": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::ambassador.ambassador",
+      "target": "api::ambassadors-list.ambassadors-list",
       "inversedBy": "live_stream"
     }
   }
